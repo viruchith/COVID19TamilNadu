@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='https://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+    <script>
+        var _0x4783 = ['https://covid19tamilnadu.firebaseio.com', 'AIzaSyBssii2-ATnya5CV0q4VgOiAFbM7prLKY4', 'covid19tamilnadu', 'covid19tamilnadu.appspot.com', '1:968374505148:web:f92b21b17755b3c5c24ab9', '968374505148', 'G-R3FVDLDYPB']; (function (_0x54bc56, _0x4783b5) { var _0x225c12 = function (_0xda564d) { while (--_0xda564d) { _0x54bc56['push'](_0x54bc56['shift']()); } }; _0x225c12(++_0x4783b5); }(_0x4783, 0x1c8)); var _0x225c = function (_0x54bc56, _0x4783b5) { _0x54bc56 = _0x54bc56 - 0x0; var _0x225c12 = _0x4783[_0x54bc56]; return _0x225c12; }; var firebaseConfig = { 'apiKey': _0x225c('0x0'), 'authDomain': 'covid19tamilnadu.firebaseapp.com', 'databaseURL': _0x225c('0x6'), 'projectId': _0x225c('0x1'), 'storageBucket': _0x225c('0x2'), 'messagingSenderId': _0x225c('0x4'), 'appId': _0x225c('0x3'), 'measurementId': _0x225c('0x5') };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="script/main.js"></script>
+    <title>COVID-19 Tracker Tamil Nadu</title>
+</head>
+
+<body>
+    <script>
+        function topnav() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+    </script>
+    <div class="titleContainer"><h1>COVID-19 Tracker Tamil Nadu</h1></div>
+    <div class="topnav" id="myTopnav">
+        <a href="https://viruchith.github.io/" class="active">Tracker</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="help.html">Help</a>
+        <a href="javascript:void(0);" class="icon" onclick="topnav()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <br>
+<div>
+    <h3 id="tnGraph">Tamil Nadu:</h3>
+    <img    src="https://plotly.com/~Viruchith/1.png?share_key=blFMC3ShDvM1UeGVmK0LG2" alt="Plot 1"
+            style="max-width: 100%;width: 600px;" width="600"
+            onerror="this.onerror=null;this.src='https://plotly.com/404.png';">
+    <script data-plotly="Viruchith:1" sharekey-plotly="blFMC3ShDvM1UeGVmK0LG2" src="https://plotly.com/embed.js"
+        async></script>
+</div>
+<br>
+<h3 id="totalinfected">Total Infected : 0</h3>
+<h3 id="totaldeaths">Total Deaths   : 0</h3>
+<h5 style="color:red;text-align:center;" >*Source <a href="https://www.mohfw.gov.in/">MOHFW.gov.in</a></h5>
+<br>
+<br>
+<div><h4 style="text-decoration:underline;color:blue;border:5px;">Choose a District and click 'GET' :</h4></div>
+<select name="" id="districtselect" onload="" style="background-color:#969696">
+    <option value="NA" selected>-NA-</option>
+    <option value="Salem">Salem</option>
+    <option value="Chennai">Chennai</option>
+    <option value="Coimbatore">Coimbatore</option>
+    <option value="Erode">Erode</option>
+    <option value="Kancheepuram">Kancheepuram</option>
+    <option value="Madurai">Madurai</option>
+    <option value="Thirunelveli">Thirunelveli</option>
+    <option value="Tiruppur">Tiruppur</option>
+    <option value="Ariyalur">Ariyalur</option>
+    <option value="Chengalpattu">Chengalpattu</option>
+    <option value="Cuddalore">Cuddalore</option>
+    <option value="Dharamapuri">Dharmapuri</option>
+    <option value="Dindugal">Dindugal</option>
+    <option value="Kallakurichi">Kallakurichi</option>
+    <option value="Kanniyakumari">Kanniyakumari</option>
+    <option value="Karur">Karur</option>
+    <option value="Krishnagiri">Krishnagiri</option>
+    <option value="Nagapattinam">Nagapattinam</option>
+    <option value="Namakkal">Namakkal</option>
+    <option value="Perambalur">Perambalur</option>
+    <option value="Pudhukottai">Pudhukottai</option>
+    <option value="Ramanathapuram">Ramanathapuram</option>
+    <option value="Ranipet">Ranipet</option>
+    <option value="Sivagangai">Sivagangai</option>
+    <option value="Thanjavur">Thanjavur</option>
+    <option value="Tirupattur">Tirupattur</option>
+    <option value="The Nilgiris">The Nilgiris</option>
+    <option value="Theni">Theni</option>
+    <option value="Thenkasi">Thenkasi</option>
+    <option value="Thiruvallur">Thiruvallur</option>
+    <option value="Thiruvannamalai">Thiruvannamalai</option>
+    <option value="Thiruvarur">Thiruvarur</option>
+    <option value="Trichy">Trichy</option>
+    <option value="Tuticorin">Tuticorin</option>
+    <option value="Vellore">Vellore</option>
+    <option value="Villupuram">Villupuram</option>
+    <option value="Virudhunagar">Virudhunagar</option>
+</select>
+<button type="button" name="button" onclick="getAndPlot()" style="font-size:15px;color:white;padding:5px;background-color:#0388fc;border:3px;border-radius:4px;font-weight:900;" >GET</button>
+<br>
+  <div id="districtplot" style="text-align:center;"></div>
+<h3 id="infected" style="">Infected : 0</h3>
+<h3 id="deaths" style="">Deaths   : 0</h3></h3>
+<div class="footer">
+    <h3>To know more :</h3>
+    <a href="http://"><img src="https://www.mohfw.gov.in/assets/images/logo.jpg" id="logo" alt=""></a>
+</div>
+</body>
+</html>
