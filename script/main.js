@@ -1,1 +1,64 @@
-var _0x5b27=['newPlot','COVID-19','#f02011','TotalInfected','innerHTML','ref','database','/TNTotal','#fc8403','districtplot','Total\x20Infected\x20:\x20','Total\x20Deaths\x20\x20\x20:\x20','value','getElementById','Infected\x20:\x20','log','stack','infected','val','rgb(8,48,107)','map','deaths','Name','TotalDeaths','Deaths\x20\x20\x20:\x20','Infected','Deaths','totaldeaths'];(function(_0x4c9818,_0x5b27b5){var _0x165614=function(_0x339a89){while(--_0x339a89){_0x4c9818['push'](_0x4c9818['shift']());}};_0x165614(++_0x5b27b5);}(_0x5b27,0x1a6));var _0x1656=function(_0x4c9818,_0x5b27b5){_0x4c9818=_0x4c9818-0x0;var _0x165614=_0x5b27[_0x4c9818];return _0x165614;};const database=firebase[_0x1656('0x4')]();function getAndPlot(){var _0x4faf4b=database[_0x1656('0x3')]('/TamilNadu/'+document[_0x1656('0xb')]('districtselect')['value']);_0x4faf4b['on'](_0x1656('0xa'),_0x16cde0=>{console[_0x1656('0xd')](_0x16cde0[_0x1656('0x10')]()[_0x1656('0x14')]);console[_0x1656('0xd')](_0x16cde0[_0x1656('0x10')]()[_0x1656('0x18')]);console[_0x1656('0xd')](_0x16cde0[_0x1656('0x10')]()[_0x1656('0x17')]);var _0x48c43b=_0x16cde0[_0x1656('0x10')]()[_0x1656('0x14')];var _0x5d09fe=_0x16cde0[_0x1656('0x10')]()[_0x1656('0x18')];var _0x3c4186=_0x16cde0['val']()[_0x1656('0x17')];var _0x54062f=document[_0x1656('0xb')](_0x1656('0x7'));var _0x450c13={'title':_0x1656('0x1b')+'\x20'+_0x48c43b,'barmode':_0x1656('0xe')};var _0x1f5f5e=['Infected','Deaths'];var _0x3505ab=[_0x3c4186,_0x5d09fe];var _0x2e3cdd={'x':_0x1f5f5e,'y':_0x3505ab,'width':[0.5,0.5],'type':'bar','text':_0x3505ab[_0x1656('0x12')](String),'textposition':'auto','hoverinfo':'none','marker':{'color':[_0x1656('0x6'),_0x1656('0x0')],'opacity':0.9,'line':{'color':_0x1656('0x11'),'width':1.5}}};var _0x2416d2=[_0x2e3cdd];Plotly[_0x1656('0x1a')](_0x54062f,_0x2416d2,_0x450c13);document['getElementById'](_0x1656('0xf'))[_0x1656('0x2')]=_0x1656('0xc')+_0x3c4186;document[_0x1656('0xb')](_0x1656('0x13'))['innerHTML']=_0x1656('0x16')+_0x5d09fe;});window.alert("Plot Succesful \(^-^)/");}var totalget=database[_0x1656('0x3')](_0x1656('0x5'));totalget['on'](_0x1656('0xa'),_0x3e50e4=>{document[_0x1656('0xb')]('totalinfected')['innerHTML']=_0x1656('0x8')+_0x3e50e4[_0x1656('0x10')]()[_0x1656('0x1')];document[_0x1656('0xb')](_0x1656('0x19'))[_0x1656('0x2')]=_0x1656('0x9')+_0x3e50e4['val']()[_0x1656('0x15')];});
+const database = firebase['\x64\x61\x74\x61\x62\x61\x73\x65']();
+
+function getAndPlot() {
+    var _0x13a111 = database['\x72\x65\x66']('\x2f\x54\x61\x6d\x69\x6c\x4e\x61\x64\x75\x2f' + document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x64\x69\x73\x74\x72\x69\x63\x74\x73\x65\x6c\x65\x63\x74')['\x76\x61\x6c\x75\x65']);
+    _0x13a111['\x6f\x6e']('\x76\x61\x6c\x75\x65', _0x412afb => {
+        console['\x6c\x6f\x67'](_0x412afb['\x76\x61\x6c']()['\x4e\x61\x6d\x65']);
+        console['\x6c\x6f\x67'](_0x412afb['\x76\x61\x6c']()['\x44\x65\x61\x74\x68\x73']);
+        console['\x6c\x6f\x67'](_0x412afb['\x76\x61\x6c']()['\x49\x6e\x66\x65\x63\x74\x65\x64']);
+        var _0x3372b1 = _0x412afb['\x76\x61\x6c']()['\x4e\x61\x6d\x65'];
+        var _0xafe405 = _0x412afb['\x76\x61\x6c']()['\x44\x65\x61\x74\x68\x73'];
+        var _0x3da263 = _0x412afb['\x76\x61\x6c']()['\x49\x6e\x66\x65\x63\x74\x65\x64'];
+        var _0x56a085 = document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x64\x69\x73\x74\x72\x69\x63\x74\x70\x6c\x6f\x74');
+        var _0x4a13ba = {};
+        _0x4a13ba['\x61\x75\x74\x6f\x74\x69\x63\x6b'] = ![];
+        _0x4a13ba['\x74\x69\x63\x6b\x73'] = '\x6f\x75\x74\x73\x69\x64\x65';
+        _0x4a13ba['\x74\x69\x63\x6b\x30'] = 0x0;
+        _0x4a13ba['\x64\x74\x69\x63\x6b'] = 0x1;
+        _0x4a13ba['\x74\x69\x63\x6b\x6c\x65\x6e'] = 0x8;
+        _0x4a13ba['\x74\x69\x63\x6b\x77\x69\x64\x74\x68'] = 0x4;
+        _0x4a13ba['\x74\x69\x63\x6b\x63\x6f\x6c\x6f\x72'] = '\x23\x30\x30\x30';
+        var _0x35cb15 = {};
+        _0x35cb15['\x61\x75\x74\x6f\x74\x69\x63\x6b'] = ![];
+        _0x35cb15['\x74\x69\x63\x6b\x73'] = '\x6f\x75\x74\x73\x69\x64\x65';
+        _0x35cb15['\x74\x69\x63\x6b\x30'] = 0x0;
+        _0x35cb15['\x64\x74\x69\x63\x6b'] = 0x1;
+        _0x35cb15['\x74\x69\x63\x6b\x6c\x65\x6e'] = 0x8;
+        _0x35cb15['\x74\x69\x63\x6b\x77\x69\x64\x74\x68'] = 0x4;
+        _0x35cb15['\x74\x69\x63\x6b\x63\x6f\x6c\x6f\x72'] = '\x23\x30\x30\x30';
+        var _0x105b6c = {};
+        _0x105b6c['\x74\x69\x74\x6c\x65'] = '\x43\x4f\x56\x49\x44\x2d\x31\x39' + '\x20' + _0x3372b1;
+        _0x105b6c['\x62\x61\x72\x6d\x6f\x64\x65'] = '\x73\x74\x61\x63\x6b';
+        _0x105b6c['\x78\x61\x78\x69\x73'] = _0x4a13ba;
+        _0x105b6c['\x79\x61\x78\x69\x73'] = _0x35cb15;
+        var _0x5b0386 = _0x105b6c;
+        var _0x47b08e = ['\x49\x6e\x66\x65\x63\x74\x65\x64', '\x44\x65\x61\x74\x68\x73'];
+        var _0x38cfac = [_0x3da263, _0xafe405];
+        var _0x338c44 = {};
+        _0x338c44['\x63\x6f\x6c\x6f\x72'] = '\x72\x67\x62\x28\x38\x2c\x34\x38\x2c\x31\x30\x37\x29';
+        _0x338c44['\x77\x69\x64\x74\x68'] = 1.5;
+        var _0x534b54 = {};
+        _0x534b54['\x63\x6f\x6c\x6f\x72'] = ['\x23\x66\x63\x38\x34\x30\x33', '\x23\x66\x30\x32\x30\x31\x31'];
+        _0x534b54['\x6f\x70\x61\x63\x69\x74\x79'] = 0.9;
+        _0x534b54['\x6c\x69\x6e\x65'] = _0x338c44;
+        var _0x5877d6 = {};
+        _0x5877d6['\x78'] = _0x47b08e;
+        _0x5877d6['\x79'] = _0x38cfac;
+        _0x5877d6['\x77\x69\x64\x74\x68'] = [0.5, 0.5];
+        _0x5877d6['\x74\x79\x70\x65'] = '\x62\x61\x72';
+        _0x5877d6['\x74\x65\x78\x74'] = _0x38cfac['\x6d\x61\x70'](String);
+        _0x5877d6['\x74\x65\x78\x74\x70\x6f\x73\x69\x74\x69\x6f\x6e'] = '\x61\x75\x74\x6f';
+        _0x5877d6['\x68\x6f\x76\x65\x72\x69\x6e\x66\x6f'] = '\x6e\x6f\x6e\x65';
+        _0x5877d6['\x6d\x61\x72\x6b\x65\x72'] = _0x534b54;
+        var _0x3e2417 = _0x5877d6;
+        var _0x132397 = [_0x3e2417];
+        Plotly['\x6e\x65\x77\x50\x6c\x6f\x74'](_0x56a085, _0x132397, _0x5b0386);
+        document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x69\x6e\x66\x65\x63\x74\x65\x64')['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = '\x49\x6e\x66\x65\x63\x74\x65\x64\x20\x3a\x20' + _0x3da263;
+        document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x64\x65\x61\x74\x68\x73')['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = '\x44\x65\x61\x74\x68\x73\x20\x20\x20\x3a\x20' + _0xafe405;
+    });
+}
+var totalget = database['\x72\x65\x66']('\x2f\x54\x4e\x54\x6f\x74\x61\x6c');
+totalget['\x6f\x6e']('\x76\x61\x6c\x75\x65', _0x364454 => {
+    document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x74\x6f\x74\x61\x6c\x69\x6e\x66\x65\x63\x74\x65\x64')['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = '\x54\x6f\x74\x61\x6c\x20\x49\x6e\x66\x65\x63\x74\x65\x64\x20\x3a\x20' + _0x364454['\x76\x61\x6c']()['\x54\x6f\x74\x61\x6c\x49\x6e\x66\x65\x63\x74\x65\x64'];
+    document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x74\x6f\x74\x61\x6c\x64\x65\x61\x74\x68\x73')['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = '\x54\x6f\x74\x61\x6c\x20\x44\x65\x61\x74\x68\x73\x20\x20\x20\x3a\x20' + _0x364454['\x76\x61\x6c']()['\x54\x6f\x74\x61\x6c\x44\x65\x61\x74\x68\x73'];
+});
