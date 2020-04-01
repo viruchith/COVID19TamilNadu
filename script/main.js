@@ -1,64 +1,69 @@
-const database = firebase['\x64\x61\x74\x61\x62\x61\x73\x65']();
-
+const database = firebase.database();
 function getAndPlot() {
-    var _0x13a111 = database['\x72\x65\x66']('\x2f\x54\x61\x6d\x69\x6c\x4e\x61\x64\x75\x2f' + document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x64\x69\x73\x74\x72\x69\x63\x74\x73\x65\x6c\x65\x63\x74')['\x76\x61\x6c\x75\x65']);
-    _0x13a111['\x6f\x6e']('\x76\x61\x6c\x75\x65', _0x412afb => {
-        console['\x6c\x6f\x67'](_0x412afb['\x76\x61\x6c']()['\x4e\x61\x6d\x65']);
-        console['\x6c\x6f\x67'](_0x412afb['\x76\x61\x6c']()['\x44\x65\x61\x74\x68\x73']);
-        console['\x6c\x6f\x67'](_0x412afb['\x76\x61\x6c']()['\x49\x6e\x66\x65\x63\x74\x65\x64']);
-        var _0x3372b1 = _0x412afb['\x76\x61\x6c']()['\x4e\x61\x6d\x65'];
-        var _0xafe405 = _0x412afb['\x76\x61\x6c']()['\x44\x65\x61\x74\x68\x73'];
-        var _0x3da263 = _0x412afb['\x76\x61\x6c']()['\x49\x6e\x66\x65\x63\x74\x65\x64'];
-        var _0x56a085 = document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x64\x69\x73\x74\x72\x69\x63\x74\x70\x6c\x6f\x74');
-        var _0x4a13ba = {};
-        _0x4a13ba['\x61\x75\x74\x6f\x74\x69\x63\x6b'] = ![];
-        _0x4a13ba['\x74\x69\x63\x6b\x73'] = '\x6f\x75\x74\x73\x69\x64\x65';
-        _0x4a13ba['\x74\x69\x63\x6b\x30'] = 0x0;
-        _0x4a13ba['\x64\x74\x69\x63\x6b'] = 0x1;
-        _0x4a13ba['\x74\x69\x63\x6b\x6c\x65\x6e'] = 0x8;
-        _0x4a13ba['\x74\x69\x63\x6b\x77\x69\x64\x74\x68'] = 0x4;
-        _0x4a13ba['\x74\x69\x63\x6b\x63\x6f\x6c\x6f\x72'] = '\x23\x30\x30\x30';
-        var _0x35cb15 = {};
-        _0x35cb15['\x61\x75\x74\x6f\x74\x69\x63\x6b'] = ![];
-        _0x35cb15['\x74\x69\x63\x6b\x73'] = '\x6f\x75\x74\x73\x69\x64\x65';
-        _0x35cb15['\x74\x69\x63\x6b\x30'] = 0x0;
-        _0x35cb15['\x64\x74\x69\x63\x6b'] = 0x1;
-        _0x35cb15['\x74\x69\x63\x6b\x6c\x65\x6e'] = 0x8;
-        _0x35cb15['\x74\x69\x63\x6b\x77\x69\x64\x74\x68'] = 0x4;
-        _0x35cb15['\x74\x69\x63\x6b\x63\x6f\x6c\x6f\x72'] = '\x23\x30\x30\x30';
-        var _0x105b6c = {};
-        _0x105b6c['\x74\x69\x74\x6c\x65'] = '\x43\x4f\x56\x49\x44\x2d\x31\x39' + '\x20' + _0x3372b1;
-        _0x105b6c['\x62\x61\x72\x6d\x6f\x64\x65'] = '\x73\x74\x61\x63\x6b';
-        _0x105b6c['\x78\x61\x78\x69\x73'] = _0x4a13ba;
-        _0x105b6c['\x79\x61\x78\x69\x73'] = _0x35cb15;
-        var _0x5b0386 = _0x105b6c;
-        var _0x47b08e = ['\x49\x6e\x66\x65\x63\x74\x65\x64', '\x44\x65\x61\x74\x68\x73'];
-        var _0x38cfac = [_0x3da263, _0xafe405];
-        var _0x338c44 = {};
-        _0x338c44['\x63\x6f\x6c\x6f\x72'] = '\x72\x67\x62\x28\x38\x2c\x34\x38\x2c\x31\x30\x37\x29';
-        _0x338c44['\x77\x69\x64\x74\x68'] = 1.5;
-        var _0x534b54 = {};
-        _0x534b54['\x63\x6f\x6c\x6f\x72'] = ['\x23\x66\x63\x38\x34\x30\x33', '\x23\x66\x30\x32\x30\x31\x31'];
-        _0x534b54['\x6f\x70\x61\x63\x69\x74\x79'] = 0.9;
-        _0x534b54['\x6c\x69\x6e\x65'] = _0x338c44;
-        var _0x5877d6 = {};
-        _0x5877d6['\x78'] = _0x47b08e;
-        _0x5877d6['\x79'] = _0x38cfac;
-        _0x5877d6['\x77\x69\x64\x74\x68'] = [0.5, 0.5];
-        _0x5877d6['\x74\x79\x70\x65'] = '\x62\x61\x72';
-        _0x5877d6['\x74\x65\x78\x74'] = _0x38cfac['\x6d\x61\x70'](String);
-        _0x5877d6['\x74\x65\x78\x74\x70\x6f\x73\x69\x74\x69\x6f\x6e'] = '\x61\x75\x74\x6f';
-        _0x5877d6['\x68\x6f\x76\x65\x72\x69\x6e\x66\x6f'] = '\x6e\x6f\x6e\x65';
-        _0x5877d6['\x6d\x61\x72\x6b\x65\x72'] = _0x534b54;
-        var _0x3e2417 = _0x5877d6;
-        var _0x132397 = [_0x3e2417];
-        Plotly['\x6e\x65\x77\x50\x6c\x6f\x74'](_0x56a085, _0x132397, _0x5b0386);
-        document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x69\x6e\x66\x65\x63\x74\x65\x64')['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = '\x49\x6e\x66\x65\x63\x74\x65\x64\x20\x3a\x20' + _0x3da263;
-        document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x64\x65\x61\x74\x68\x73')['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = '\x44\x65\x61\x74\x68\x73\x20\x20\x20\x3a\x20' + _0xafe405;
+    var usersRef = database.ref('/TamilNadu/' + document.getElementById('districtselect').value);
+    usersRef.on('value', snapshot => {
+        console.log(snapshot.val().Name);
+        console.log(snapshot.val().Deaths);
+        console.log(snapshot.val().Infected);
+        var districtname = snapshot.val().Name;
+        var deathcount = snapshot.val().Deaths;
+        var infectedcount = snapshot.val().Infected;
+        var plot = document.getElementById("districtplot");
+        var layout = {
+            title: 'COVID-19' + " " + districtname,
+            barmode: 'stack',
+            xaxis: {
+                autotick: false,
+                ticks: 'outside',
+                tick0: 0,
+                dtick: 1,
+                ticklen: 8,
+                tickwidth: 4,
+                tickcolor: '#000'
+            },
+            yaxis: {
+                autotick: false,
+                ticks: 'outside',
+                tick0: 0,
+                dtick: 1,
+                ticklen: 15,
+                tickwidth: 4,
+                tickcolor: '#000'
+            }
+        };
+        var xValue = ['Infected', 'Deaths'];
+        var yValue = [infectedcount, deathcount];
+        var trace1 = {
+            x: xValue,
+            y: yValue,
+            width: [0.5, 0.5],
+            type: 'bar',
+            text: yValue.map(String),
+            textposition: 'auto',
+            hoverinfo: 'none',
+            marker: {
+                color: ['#fc8403', '#f02011'],
+                opacity: 0.9,
+                line: {
+                    color: 'rgb(8,48,107)',
+                    width: 1.5
+                }
+            }
+        };
+
+        var data = [trace1];
+        Plotly.newPlot(plot, data, layout);
+        document.getElementById("infected").innerHTML = "Infected : " +
+            infectedcount;
+        document.getElementById("deaths").innerHTML = "Deaths   : " +
+            deathcount;
+
     });
 }
-var totalget = database['\x72\x65\x66']('\x2f\x54\x4e\x54\x6f\x74\x61\x6c');
-totalget['\x6f\x6e']('\x76\x61\x6c\x75\x65', _0x364454 => {
-    document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x74\x6f\x74\x61\x6c\x69\x6e\x66\x65\x63\x74\x65\x64')['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = '\x54\x6f\x74\x61\x6c\x20\x49\x6e\x66\x65\x63\x74\x65\x64\x20\x3a\x20' + _0x364454['\x76\x61\x6c']()['\x54\x6f\x74\x61\x6c\x49\x6e\x66\x65\x63\x74\x65\x64'];
-    document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64']('\x74\x6f\x74\x61\x6c\x64\x65\x61\x74\x68\x73')['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = '\x54\x6f\x74\x61\x6c\x20\x44\x65\x61\x74\x68\x73\x20\x20\x20\x3a\x20' + _0x364454['\x76\x61\x6c']()['\x54\x6f\x74\x61\x6c\x44\x65\x61\x74\x68\x73'];
-});
+
+var totalget = database.ref('/TNTotal');
+totalget.on('value', snapshot => {
+    document.getElementById("totalinfected").innerHTML = "Total Infected : " + snapshot.val().TotalInfected;
+    document.getElementById("totaldeaths").innerHTML = "Total Deaths   : " + snapshot.val().TotalDeaths;
+    document.getElementById("totalrecovered").innerHTML ="Total Recovered : "+snapshot.val().TotalRecovered;
+})
