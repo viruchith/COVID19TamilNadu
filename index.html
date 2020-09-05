@@ -1,118 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='https://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/main.css">
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
-    <script>
-        var _0x4783 = ['https://covid19tamilnadu.firebaseio.com', 'AIzaSyBssii2-ATnya5CV0q4VgOiAFbM7prLKY4', 'covid19tamilnadu', 'covid19tamilnadu.appspot.com', '1:968374505148:web:f92b21b17755b3c5c24ab9', '968374505148', 'G-R3FVDLDYPB']; (function (_0x54bc56, _0x4783b5) { var _0x225c12 = function (_0xda564d) { while (--_0xda564d) { _0x54bc56['push'](_0x54bc56['shift']()); } }; _0x225c12(++_0x4783b5); }(_0x4783, 0x1c8)); var _0x225c = function (_0x54bc56, _0x4783b5) { _0x54bc56 = _0x54bc56 - 0x0; var _0x225c12 = _0x4783[_0x54bc56]; return _0x225c12; }; var firebaseConfig = { 'apiKey': _0x225c('0x0'), 'authDomain': 'covid19tamilnadu.firebaseapp.com', 'databaseURL': _0x225c('0x6'), 'projectId': _0x225c('0x1'), 'storageBucket': _0x225c('0x2'), 'messagingSenderId': _0x225c('0x4'), 'appId': _0x225c('0x3'), 'measurementId': _0x225c('0x5') };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-    </script>
-    <script src="script/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>COVID-19 Tracker Tamil Nadu</title>
+    <style>
+        table {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+            border: 5px;
+        }
+
+        #search {
+            width: 40%;
+        }
+    </style>
 </head>
 
 <body>
     <script>
         function topnav() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
-                } else {
-                    x.className = "topnav";
-                }
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
             }
+        }
     </script>
-    <div class="titleContainer"><h1>COVID-19 Tracker Tamil Nadu</h1></div>
+    <div class="titleContainer">
+        <h1>COVID-19 Tracker Tamil Nadu</h1>
+    </div>
     <div class="topnav" id="myTopnav">
         <a href="index.html" class="active">Tracker</a>
-        <a href="timeline.html">Timeline</a>
         <a href="help.html">Help</a>
         <a href="javascript:void(0);" class="icon" onclick="topnav()">
-        <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"></i>
         </a>
     </div>
     <br>
-<div>
-    <h3 id="tnGraph">Tamil Nadu:</h3>
-<div>
-    <a href="https://plotly.com/~Viruchith/1/?share_key=blFMC3ShDvM1UeGVmK0LG2" target="_blank" title="Plot 1"
-        style="display: block; text-align: center;"><img
-            src="https://plotly.com/~Viruchith/1.png?share_key=blFMC3ShDvM1UeGVmK0LG2" alt="Plot 1"
-            style="max-width: 100%;width: 600px;" width="600"
-            onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
-    <script data-plotly="Viruchith:1" sharekey-plotly="blFMC3ShDvM1UeGVmK0LG2" src="https://plotly.com/embed.js"
-        async></script>
-</div>
-</div>
-<br>
-<div>
-    <img src="https://plotly.com/~Viruchith/10.png?share_key=wAFTTvQiYebr5YL6qiKnwS" alt="COVIDDateplot" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plotly.com/404.png';" />
-    <script data-plotly="Viruchith:10" sharekey-plotly="wAFTTvQiYebr5YL6qiKnwS" src="https://plotly.com/embed.js" async></script>
-</div>
+    <center>
+        <div class="form-group">
+            <input type="text" class="form-control" onkeyup="search();" id="search" aria-describedby="helpId"
+                placeholder="Search by district">
+        </div>
+    </center>
+    <br>
+    <div class="table-responsive">
+        <table class="table table-striped" id="CovidTable">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">District</th>
+                    <th scope="col">Confirmed</th>
+                    <th scope="col">Active</th>
+                    <th scope="col">Deceased</th>
 
-<h3 id="totalinfected">Total Infected : 0</h3>
-<h3 id="totaldeaths">Total Deaths   : 0</h3>
-<h3 id="totalrecovered">Total Recovered : 0</h3>
-<h5 style="color:red;text-align:center;">*Source <a href="http://www.stopcoronatn.in/" target="_blank">NHM-TN</a></h5>
-<br>
-<br>
-<div><h4 style="text-decoration:underline;color:blue;border:5px;">Choose a District and click 'GET' :</h4></div>
-<select name="" id="districtselect" onload="" style="background-color:#969696">
-    <option value="NA" selected>-NA-</option>
-    <option value="Salem">Salem</option>
-    <option value="Chennai">Chennai</option>
-    <option value="Coimbatore">Coimbatore</option>
-    <option value="Erode">Erode</option>
-    <option value="Kancheepuram">Kancheepuram</option>
-    <option value="Madurai">Madurai</option>
-    <option value="Thirunelveli">Thirunelveli</option>
-    <option value="Tiruppur">Tiruppur</option>
-    <option value="Ariyalur">Ariyalur</option>
-    <option value="Chengalpattu">Chengalpattu</option>
-    <option value="Cuddalore">Cuddalore</option>
-    <option value="Dharamapuri">Dharmapuri</option>
-    <option value="Dindugal">Dindugal</option>
-    <option value="Kallakurichi">Kallakurichi</option>
-    <option value="Kanniyakumari">Kanniyakumari</option>
-    <option value="Karur">Karur</option>
-    <option value="Krishnagiri">Krishnagiri</option>
-    <option value="Nagapattinam">Nagapattinam</option>
-    <option value="Namakkal">Namakkal</option>
-    <option value="Perambalur">Perambalur</option>
-    <option value="Pudhukottai">Pudhukottai</option>
-    <option value="Ramanathapuram">Ramanathapuram</option>
-    <option value="Ranipet">Ranipet</option>
-    <option value="Sivagangai">Sivagangai</option>
-    <option value="Thanjavur">Thanjavur</option>
-    <option value="Tirupattur">Tirupattur</option>
-    <option value="The Nilgiris">The Nilgiris</option>
-    <option value="Theni">Theni</option>
-    <option value="Thenkasi">Thenkasi</option>
-    <option value="Thiruvallur">Thiruvallur</option>
-    <option value="Thiruvannamalai">Thiruvannamalai</option>
-    <option value="Thiruvarur">Thiruvarur</option>
-    <option value="Trichy">Trichy</option>
-    <option value="Tuticorin">Tuticorin</option>
-    <option value="Vellore">Vellore</option>
-    <option value="Villupuram">Villupuram</option>
-    <option value="Virudhunagar">Virudhunagar</option>
-</select>
-<button type="button" name="button" onclick="getAndPlot()" style="font-size:15px;color:white;padding:5px;background-color:#0388fc;border:3px;border-radius:4px;font-weight:900;" >GET</button>
-<br>
-  <div id="districtplot" style="text-align:center;"></div>
-<h3 id="infected" style="">Infected : 0</h3>
-<h3 id="deaths" style="">Deaths   : 0</h3></h3>
-<div class="footer">
-    <h3>To know more :</h3>
-    <a href="https://www.mohfw.gov.in/"><img src="http://www.stopcoronatn.in/img/nhm.png" id="logo" alt="http://www.stopcoronatn.in/img/nhm.png"></a>
-</div>
+                    <th scope="col">Recovered</th>
+                    <th scope="col">Tested</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <center>
+        <h4>*Source&nbsp;<a href="https://covid19india.org">covid19india.org</a></h4>
+    </center>
+    <br>
+    <script>
+        function loadData() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var obj = JSON.parse(this.responseText);
+                    var TN = obj.TN.districts;
+                    var count = 1;
+                    for (district in TN) {
+                        var confirmed = TN[district].total.confirmed;
+                        var deceased = TN[district].total.deceased;
+                        var recovered = TN[district].total.recovered;
+                        var tested = TN[district].total.tested;
+                        var active = confirmed - (deceased + recovered);
+                        document.getElementById("data").innerHTML += "<tr><th scope='row'>" + count + "</th><td>" +
+                            district + "</td><td>" + TN[district].total.confirmed + "</td><td>" + active +
+                            "</td><td>" + TN[district].total
+                            .deceased + "</td><td>" + TN[district].total.recovered + "</td><td>" + TN[district]
+                            .total.tested + "</td></tr>";
+                        count++;
+                    }
+                }
+            };
+            xhttp.open("GET", "https://api.covid19india.org/v4/data.json", true);
+            xhttp.send();
+        }
+        loadData();
+    </script>
+    <script>
+        function search() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("CovidTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    <br>
+    <div class="footer">
+        <h3>To know more :</h3>
+        <a href="https://www.mohfw.gov.in/"><img
+                src="https://d3pc1xvrcw35tl.cloudfront.net/ln/feedImages/300x225/aUG11_rep_NisJedB_202008.jpg" id="logo"
+                alt="http://www.stopcoronatn.in/img/nhm.png"></a>
+    </div>
 </body>
+
 </html>
